@@ -1,3 +1,3 @@
 # go-fsm
 
-A Go Finite State Maching (FSM)
+A Go Finite State Machine (FSM)
