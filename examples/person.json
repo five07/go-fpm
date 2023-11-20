@@ -1,0 +1,41 @@
+{
+  "id": "Person",
+  "initial": "ASLEEP",
+  "states": {
+    "ASLEEP": {
+      "events": {
+        "WAKE_UP": {
+          "target": "AWAKE"
+        }
+      }
+    },
+    "AWAKE": {
+      "initial": "HOME",
+      "events": {
+        "GO_TO_SLEEP": {
+          "target": "ASLEEP"
+        },
+        "GO_TO_WORK": {
+          "target": "WORK"
+        }
+      },
+      "states": {
+        "WORK": {
+          "events": {
+            "READ_EMAIL": {
+              "target": "EMAIL"
+            },
+            "TAKE_CALL": {
+              "target": "CALL"
+            }
+          },
+          "states": {
+            "EMAIL": {},
+            "CALL": {}
+          }
+        },
+        "HOME": {}
+      }
+    }
+  }
+}

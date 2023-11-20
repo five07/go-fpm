@@ -1,0 +1,24 @@
+{
+  "id": "switch",
+  "initial": "OFF",
+  "context": {
+    "count": 0
+  },
+  "states": {
+    "ON": {
+      "events": {
+        "SWITCH": {
+          "target": "OFF"
+        }
+      }
+    },
+    "OFF": {
+      "events": {
+        "SWITCH": {
+          "target": "ON",
+          "guard": "requireThreeTimes"
+        }
+      }
+    }
+  }
+}
